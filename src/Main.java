@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1 () {
@@ -12,7 +13,7 @@ public class Main {
         int i = 212345678;
         long l = 81234567845621L;
         float f = 3.14159f;
-        double d = 3.1415926535f;
+        double d = 3.1415926535f;   // Почему в консоль выводится 3.1415927410125732
         System.out.println("Значение переменной b с типом byte равно " + b);
         System.out.println("Значение переменной s с типом short равно " + s);
         System.out.println("Значение переменной i с типом int равно " + i);
@@ -46,5 +47,20 @@ public class Main {
         byte teacherThree = 30;
         short papers = 480;
         System.out.println("На каждого ученика рассчитано " + (papers/(teacherOne+teacherTwo+teacherThree)) + " листов бумаги");
+    }
+    public static void task4 () {
+        System.out.println();
+        System.out.println("Задача 4");
+        byte bottlePerMin = 16/2;
+        short minPerDay = 24 * 60;
+        short minPerThreeDay = 72 * 60;
+        int minPerMonth = (31*24) * 60;
+        int bottlePerDay = bottlePerMin * minPerDay;  // Почему нельзя переменную short?
+        int bottlePerThreeDay = bottlePerMin * minPerThreeDay; // Сколько памяти будет использовано при такой записи int bottlePerThreeDay = (short)bottlePerMin * minPerThreeDay;
+        int bottlePerMonth = bottlePerMin * minPerMonth;
+        System.out.println("За 20 минут машина произвела " + (bottlePerMin * 20) + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottlePerDay + " штук бутылок");
+        System.out.println("За три дня машина произвела " + bottlePerThreeDay + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottlePerMonth + " штук бутылок");
     }
 }
