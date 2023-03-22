@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1 () {
@@ -91,5 +92,19 @@ public class Main {
         float totalWeightKg = totalWeight/1000;
         System.out.println(totalWeight + " грамм"); // как форматировать вывод, чтобы float показывал нужное мне количество знаков
         System.out.println(totalWeightKg + " килограмм");
+    }
+
+    public static void task7 () {
+        System.out.println();
+        System.out.println("Задача 7");
+        short targetWeight = 7000;
+        short weightLossEasy = 250;
+        short weightLossHard = 500;
+        int daysEasy = targetWeight/weightLossEasy;
+        int daysHard = targetWeight/weightLossHard;
+        int averageDays = (daysEasy + daysHard)/2;
+        System.out.println(daysEasy + " дней потребуется спортсмену, если он будет худеть на 250г в день.");
+        System.out.println(daysHard + " дней потребуется спортсмену, если он будет худеть на 500г в день.");
+        System.out.println(averageDays + " среднее количество дней, которое потребуется спортсмену.");
     }
 }
