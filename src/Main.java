@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1 () {
@@ -106,5 +107,27 @@ public class Main {
         System.out.println(daysEasy + " дней потребуется спортсмену, если он будет худеть на 250г в день.");
         System.out.println(daysHard + " дней потребуется спортсмену, если он будет худеть на 500г в день.");
         System.out.println(averageDays + " среднее количество дней, которое потребуется спортсмену.");
+    }
+    public static void task8 () {
+        System.out.println();
+        System.out.println("Задача 8");
+        int moneyMasha = 67760;
+        int moneyDenis = 83690;
+        int moneyKris = 76230;
+        float upPercent = 0.1f;
+        int yearMasha = moneyMasha*12;
+        int yearDenis = moneyDenis*12;
+        int yearKris = moneyKris*12;
+        float newMoneyMasha = (moneyMasha*upPercent) + moneyMasha;
+        float newMoneyDenis = (moneyDenis*upPercent) + moneyDenis;
+        float newMoneyKris = (moneyKris*upPercent) + moneyKris;
+        float newYearMasha = newMoneyMasha*12;
+        float newYearDenis = newMoneyDenis*12;
+        float newYearKris = newMoneyKris*12;
+
+        System.out.println("Маша теперь получает " + newMoneyMasha + " рублей. Годовой доход вырос на " + (newYearMasha - yearMasha) + " рублей");
+        System.out.println("Денис теперь получает " + newMoneyDenis + " рублей. Годовой доход вырос на " + (newYearDenis - yearDenis) + " рублей");
+        System.out.println("Кристина теперь получает " + newMoneyKris + " рублей. Годовой доход вырос на " + (newYearKris - yearKris) + " рублей");
+
     }
 }
