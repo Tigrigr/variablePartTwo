@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1 () {
@@ -74,5 +75,21 @@ public class Main {
         int whitePaint = classesTotal * whitePerClass;
         int brownPaint = classesTotal * brownPerClass;
         System.out.println("В школе, где " + classesTotal + " классов, нужно " + whitePaint + " банок белой краски и " + brownPaint + " банок коричневой краски.");
+    }
+    public static void task6 () {
+        System.out.println();
+        System.out.println("Задача 6");
+        byte bananaWeight = 80;
+        byte bananaTotal = 5;
+        float milkWeightFloat = 100/105f; // Как ограничивать float на количество знаков?
+        short milkTotal = 200;
+        short iceCrWeight = 100;
+        short iceCrTotal = 2;
+        byte eggWeight = 70;
+        byte eggTotal = 4;
+        float totalWeight = (bananaWeight*bananaTotal)+(milkWeightFloat*milkTotal)+(iceCrWeight*iceCrTotal)+(eggWeight*eggTotal);
+        float totalWeightKg = totalWeight/1000;
+        System.out.println(totalWeight + " грамм"); // как форматировать вывод, чтобы float показывал нужное мне количество знаков
+        System.out.println(totalWeightKg + " килограмм");
     }
 }
